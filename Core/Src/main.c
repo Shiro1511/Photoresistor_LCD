@@ -162,12 +162,14 @@ int main(void)
       if (adc_value <= 500)
       {
         HAL_GPIO_WritePin(GPIOC, GPIO_PIN_15, GPIO_PIN_SET);
-        LCD_Print(&hlcd, "LED is being turned on!");
+        LCD_Clear_Display(&hlcd);
+        LCD_ScrollText(&hlcd, 0, "LED is being turned ON!", 200);
       }
       else
       {
         HAL_GPIO_WritePin(GPIOC, GPIO_PIN_15, GPIO_PIN_RESET);
-        LCD_Print(&hlcd, "LED is being turned off!");
+        LCD_Clear_Display(&hlcd);
+        LCD_ScrollText(&hlcd, 0, "LED is being turned OFF!", 200);
       }
     }
   }
