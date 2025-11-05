@@ -1,0 +1,22 @@
+# --- Build output ---
+build/
+cmake-build*/
+Debug/
+Release/
+*.o
+*.elf
+*.bin
+*.hex
+*.map
+
+# --- IDE configs ---
+.vscode/
+.settings/
+.idea/
+
+# --- STM32CubeMX temp ---
+mx.scratch
+*.ioc-backup
+*.tmp
+*.log
+*.bak
